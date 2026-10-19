@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>404 · Mohit Soni</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=JetBrains+Mono:wght@400..700&display=swap">
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('theme');
+        if (saved === 'light' || saved === 'dark') document.documentElement.setAttribute('data-theme', saved);
+      } catch (e) {}
+    })();
+  </script>
+  <style>
+    /* Self-contained on purpose: a 404 can be served from any path, so it can't rely on relative assets. */
+    :root {
+      --bg: #f4f6f9; --surface: #fcfdfe; --ink: #121825; --ink-2: #3f4552; --ink-3: #5f6571;
+      --line: #dbdee3; --accent: #314ed2; --panel: #121722; --panel-ink: #e5e8ed; --panel-ink-2: #a3a8b2;
+      --panel-line: #262d3b; --panel-accent: #96b0ff; --panel-warn: #f2b56b;
+      color-scheme: light;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --bg: #10141c; --surface: #181c25; --ink: #e9ebf0; --ink-2: #bdc1ca; --ink-3: #979ba5;
+        --line: #2c303a; --accent: #8da9ff; --panel: #0c0f16; --panel-line: #232a38;
+        color-scheme: dark;
+      }
+    }
+    :root[data-theme="dark"] {
+      --bg: #10141c; --surface: #181c25; --ink: #e9ebf0; --ink-2: #bdc1ca; --ink-3: #979ba5;
+      --line: #2c303a; --accent: #8da9ff; --panel: #0c0f16; --panel-line: #232a38;
+      color-scheme: dark;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      display: grid;
+      place-items: center;
+      padding: max(24px, env(safe-area-inset-top, 0px)) max(20px, env(safe-area-inset-right, 0px)) max(24px, env(safe-area-inset-bottom, 0px)) max(20px, env(safe-area-inset-left, 0px));
+      background: var(--bg);
+      color: var(--ink);
+      font: 400 1.0625rem/1.6 "Archivo", "Helvetica Neue", Arial, system-ui, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    main { width: 100%; max-width: 640px; }
+    .code {
+      margin: 0 0 12px;
+      font: 500 0.75rem/1 "JetBrains Mono", ui-monospace, Menlo, monospace;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-3);
+    }
+    h1 {
+      margin: 0;
+      font-stretch: 118%;
+      font-weight: 650;
+      font-size: clamp(2.2rem, 1.2rem + 4vw, 3.4rem);
+      line-height: 1.02;
+      letter-spacing: -0.04em;
+      text-wrap: balance;
+    }
+    p.lede { margin: 16px 0 0; color: var(--ink-2); max-width: 48ch; }
+    pre {
+      margin: 28px 0 0;
+      padding: 16px 18px;
+      overflow-x: auto;
+      font: 400 0.8125rem/1.75 "JetBrains Mono", ui-monospace, Menlo, monospace;
+      color: var(--panel-ink);
+      background: var(--panel);
+      border: 1px solid var(--panel-line);
+      border-radius: 10px;
+    }
+    .m { color: var(--panel-accent); font-weight: 700; }
+    .s { color: var(--panel-warn); font-weight: 600; }
+    .c { color: var(--panel-ink-2); }
+    a.home {
+      display: inline-flex;
+      align-items: center;
+      height: 44px;
+      margin-top: 28px;
+      padding: 0 18px;
+      font-weight: 560;
+      color: var(--bg);
+      background: var(--ink);
+      border-radius: 8px;
+      text-decoration: none;
+    }
+    a.home:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="code">Error 404</p>
+    <h1>This route has no handler.</h1>
+    <p class="lede">The page may have moved, or the link has a typo. Retrying won’t change the answer. GET is idempotent.</p>
+<pre><code><span class="m">GET</span> <span id="path">/this-page</span>
+<span class="s">404 Not Found</span>  <span class="c">· no route matched</span></code></pre>
+    <a class="home" href="/">Back to the homepage</a>
+  </main>
+  <script>
+    (function () {
+      var el = document.getElementById('path');
+      if (el) el.textContent = window.location.pathname + window.location.search;
+    })();
+  </script>
+</body>
+</html>

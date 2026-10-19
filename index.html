@@ -1,0 +1,674 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Mohit Soni · Backend Engineer, Fintech &amp; Digital Lending</title>
+  <meta name="description" content="Mohit Soni is a backend engineer (SDE-2) in Mumbai who leads a team of 6 and builds the lending systems behind a ₹300 Cr loan book: decision engine, payments, loan calculations, KYC and compliance, with Python, Django, PostgreSQL, Redis and RabbitMQ on AWS.">
+  <meta name="author" content="Mohit Soni">
+
+  <!-- Change these four URLs if the site lives somewhere other than m0hits0ni.github.io -->
+  <link rel="canonical" href="https://m0hits0ni.github.io/">
+  <meta property="og:url" content="https://m0hits0ni.github.io/">
+  <meta property="og:image" content="https://m0hits0ni.github.io/assets/img/og.png">
+  <meta name="twitter:image" content="https://m0hits0ni.github.io/assets/img/og.png">
+
+  <meta property="og:type" content="profile">
+  <meta property="og:site_name" content="Mohit Soni">
+  <meta property="og:title" content="Mohit Soni · Backend Engineer, Fintech &amp; Digital Lending">
+  <meta property="og:description" content="I build the lending systems behind a ₹300 Cr loan book: decision engine, payments and loan calculations for digital lending.">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Mohit Soni, backend engineer. I build the lending systems behind a ₹300 Cr loan book.">
+  <meta property="profile:first_name" content="Mohit">
+  <meta property="profile:last_name" content="Soni">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mohit Soni · Backend Engineer, Fintech &amp; Digital Lending">
+  <meta name="twitter:description" content="I build the lending systems behind a ₹300 Cr loan book: decision engine, payments and loan calculations for digital lending.">
+
+  <meta name="theme-color" content="#f4f6f9" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#10141c" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=JetBrains+Mono:wght@400..700&display=swap">
+  <link rel="stylesheet" href="assets/css/site.css">
+
+  <script>
+    // Apply a saved theme before first paint, so a returning visitor never sees a flash.
+    (function () {
+      var root = document.documentElement;
+      root.classList.add('js');
+      try {
+        var saved = localStorage.getItem('theme');
+        if (saved === 'light' || saved === 'dark') root.setAttribute('data-theme', saved);
+      } catch (e) {}
+    })();
+  </script>
+  <script src="content/posts.js" defer></script>
+  <script src="content/medium-feed.js" defer></script>
+  <script src="assets/js/site.js" defer></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Mohit Soni",
+    "jobTitle": "Software Engineer II, Backend",
+    "description": "Backend engineer and tech lead in fintech who builds the lending systems behind a ₹300 Cr loan book: decision engine, payments, loan calculations, KYC and compliance.",
+    "worksFor": { "@type": "Organization", "name": "Kuhoo Finance" },
+    "address": { "@type": "PostalAddress", "addressLocality": "Mumbai", "addressRegion": "Maharashtra", "addressCountry": "IN" },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "Rajasthan Technical University" },
+    "image": "https://m0hits0ni.github.io/assets/img/mohit-soni.jpg",
+    "email": "mailto:workmohitsoni0@gmail.com",
+    "url": "https://m0hits0ni.github.io/",
+    "sameAs": ["https://www.linkedin.com/in/mohitsoni0", "https://github.com/m0hits0ni"],
+    "knowsAbout": ["Python", "Django", "Django REST Framework", "PostgreSQL", "Redis", "RabbitMQ", "Celery", "AWS", "Kubernetes", "Distributed systems", "Event-driven architecture", "Digital lending"]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="masthead" data-masthead>
+    <div class="wrap masthead__inner">
+      <a class="brand" href="#top" aria-label="Mohit Soni, back to top">
+        <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+          <rect class="brand__tile" width="32" height="32" rx="7"/>
+          <path class="brand__m" d="M9.5 22.5v-13l6.5 7.5 6.5-7.5v13"/>
+        </svg>
+        <span class="brand__name">Mohit Soni</span>
+      </a>
+
+      <nav class="nav" aria-label="Sections">
+        <a href="#experience">Experience</a>
+        <a href="#work">Work</a>
+        <a href="#stack">Stack</a>
+        <a href="#writing">Writing</a>
+        <a href="#about">About</a>
+      </nav>
+
+      <div class="masthead__tools">
+        <button class="tool tool--palette" type="button" data-palette-open aria-haspopup="dialog" aria-label="Open the command menu">
+          <span class="tool__menu">Menu</span>
+          <kbd class="tool__kbd" data-mod-key>⌘K</kbd>
+        </button>
+        <button class="tool tool--icon" type="button" data-theme-toggle aria-label="Switch theme">
+          <svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true" focusable="false">
+            <circle cx="10" cy="10" r="6.75" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M10 3.25a6.75 6.75 0 0 1 0 13.5z" fill="currentColor"/>
+          </svg>
+        </button>
+        <a class="btn btn--small btn--solid masthead__cta" href="#contact">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============================== HERO ============================== -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="wrap hero__grid">
+        <div class="hero__copy">
+          <p class="hero__kicker"><b>Mohit Soni</b>&nbsp;· Backend engineer, SDE-2&nbsp;· Fintech, digital lending</p>
+          <h1 class="hero__title" id="hero-title">I build the lending systems behind a <em>₹300&nbsp;Cr loan book.</em></h1>
+          <p class="lede">
+            Backend engineer with <span data-years-since="2020-04">6</span>+ years in Python and <span data-years-since="2022-09">4</span> in fintech.
+            At Kuhoo Finance I lead a team of 6 developers and own the decision engine, the payment service and every loan calculation behind its education loans.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--solid" href="#work">See my work</a>
+            <a class="btn" href="assets/Mohit_Soni_Resume.pdf" target="_blank" rel="noopener">Résumé <span class="btn__note">PDF</span></a>
+          </div>
+        </div>
+
+        <div class="portrait">
+          <img class="portrait__img" src="assets/img/mohit-soni.jpg" width="640" height="800" fetchpriority="high" decoding="async" alt="Mohit Soni, smiling, wearing glasses and a light-blue shirt in an office">
+          <p class="portrait__chip portrait__chip--top"><span class="portrait__dot" aria-hidden="true"></span>Tech lead&nbsp;· team of 6</p>
+          <p class="portrait__chip portrait__chip--bottom">Mumbai<span class="js-only"> <time class="hero__clock" data-clock>--:--</time> IST</span></p>
+        </div>
+      </div>
+
+      <div class="wrap">
+        <dl class="impact">
+          <div class="impact__item impact__item--lead">
+            <dt>loan book running on loan calculations I built</dt>
+            <dd>₹300 Cr</dd>
+          </div>
+          <div class="impact__item">
+            <dt>loans underwritten by the decision engine I own</dt>
+            <dd>2.75 lakh</dd>
+          </div>
+          <div class="impact__item">
+            <dt>loan portfolio migrated from a partner NBFC, led end to end</dt>
+            <dd>₹50 Cr</dd>
+          </div>
+          <div class="impact__item">
+            <dt>loan decisions with Green Channel, down from 2.5 hours</dt>
+            <dd>34 min</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ============================== EXPERIENCE ============================== -->
+    <section class="section" id="experience" aria-labelledby="experience-title">
+      <div class="wrap">
+        <header class="section__head">
+          <a class="route" href="#experience" data-copy-link><span class="route__verb">GET</span> /#experience</a>
+          <h2 class="section__title" id="experience-title">Experience</h2>
+          <p class="section__intro"><span data-years-since="2020-04">6</span>+ years, three companies and one promotion, drawn the way I’d read a request trace.</p>
+        </header>
+
+        <figure class="trace" data-trace data-axis-start="2020-01" aria-label="Career timeline from April 2020 to the present">
+          <div class="trace__head">
+            <span>trace <b>career</b></span>
+            <span>Apr 2020 → now · <span data-span="2020-04..now">6y 7m</span></span>
+          </div>
+
+          <div class="trace__body" style="--now: .988">
+            <div class="trace__axis" aria-hidden="true" data-trace-axis>
+              <span class="tick" style="--x: 0">2020</span>
+              <span class="tick" style="--x: .1446">2021</span>
+              <span class="tick" style="--x: .2892">2022</span>
+              <span class="tick" style="--x: .4337">2023</span>
+              <span class="tick" style="--x: .5783">2024</span>
+              <span class="tick" style="--x: .7229">2025</span>
+              <span class="tick" style="--x: .8675">2026</span>
+              <span class="tick tick--now"></span>
+            </div>
+
+            <ol class="trace__rows">
+              <li class="span span--root" data-range="2020-04..now" style="--s: .0361; --e: .988">
+                <span class="span__link">
+                  <span class="span__name">Career</span>
+                  <span class="span__track"><span class="span__bar"></span></span>
+                  <span class="span__dur" data-span="2020-04..now">6y 7m</span>
+                </span>
+              </li>
+              <li class="span span--past" data-range="2020-04..2022-01" data-role="zucol" style="--s: .0361; --e: .3012">
+                <a class="span__link" href="#role-zucol">
+                  <span class="span__name"><span class="span__tree" aria-hidden="true">├─</span>Zucol Services</span>
+                  <span class="span__track"><span class="span__bar"></span></span>
+                  <span class="span__dur" data-span="2020-04..2022-01">1y 10m</span>
+                  <span class="visually-hidden">, Software Development Engineer, April 2020 to January 2022</span>
+                </a>
+              </li>
+              <li class="span span--past" data-range="2022-02..2022-08" data-role="tmedia" style="--s: .3012; --e: .3855">
+                <a class="span__link" href="#role-tmedia">
+                  <span class="span__name"><span class="span__tree" aria-hidden="true">├─</span>TMedia</span>
+                  <span class="span__track"><span class="span__bar"></span></span>
+                  <span class="span__dur" data-span="2022-02..2022-08">7m</span>
+                  <span class="visually-hidden">, Software Development Engineer, February to August 2022</span>
+                </a>
+              </li>
+              <li class="span span--org" data-range="2022-09..now" data-role="kuhoo" style="--s: .3855; --e: .988">
+                <a class="span__link" href="#org-kuhoo">
+                  <span class="span__name"><span class="span__tree" aria-hidden="true">└─</span>Kuhoo Finance</span>
+                  <span class="span__track"><span class="span__bar"></span></span>
+                  <span class="span__dur" data-span="2022-09..now">4y 2m</span>
+                  <span class="visually-hidden">, September 2022 to present</span>
+                </a>
+              </li>
+              <li class="span span--child" data-range="2022-09..2025-02" data-role="sde1" style="--s: .3855; --e: .747">
+                <a class="span__link" href="#org-kuhoo">
+                  <span class="span__name span__name--child"><span class="span__tree" aria-hidden="true">├─</span>SDE-1</span>
+                  <span class="span__track"><span class="span__bar"></span></span>
+                  <span class="span__dur" data-span="2022-09..2025-02">2y 6m</span>
+                  <span class="visually-hidden">, September 2022 to February 2025</span>
+                </a>
+              </li>
+              <li class="span span--now" data-range="2025-02..now" data-role="sde2" style="--s: .7349; --e: .988">
+                <a class="span__link" href="#org-kuhoo">
+                  <span class="span__name span__name--child"><span class="span__tree" aria-hidden="true">└─</span>SDE-2</span>
+                  <span class="span__track"><span class="span__bar"><span class="span__event" title="Promoted to SDE-2, Feb 2025"></span></span></span>
+                  <span class="span__dur" data-span="2025-02..now">1y 9m</span>
+                  <span class="visually-hidden">, February 2025 to present, promoted from SDE-1</span>
+                </a>
+              </li>
+            </ol>
+          </div>
+        </figure>
+
+        <div class="orgs">
+          <section class="org" id="org-kuhoo" data-role="kuhoo" aria-labelledby="org-kuhoo-title">
+            <header class="org__head">
+              <h3 class="org__name" id="org-kuhoo-title">Kuhoo Finance</h3>
+              <p class="org__meta">Education-loan fintech&nbsp;· Mumbai&nbsp;· Sep 2022 – Present&nbsp;· <span data-span="2022-09..now">4y 2m</span></p>
+            </header>
+
+            <article class="role" id="role-kuhoo">
+              <div class="role__meta">
+                <p class="role__step"><span class="role__level">SDE-2</span><span><time datetime="2025-02">Feb 2025</time> – Present</span><span data-span="2025-02..now">1y 9m</span></p>
+                <p class="role__step"><span class="role__level">SDE-1</span><span><time datetime="2022-09">Sep 2022</time> – <time datetime="2025-02">Feb 2025</time></span><span data-span="2022-09..2025-02">2y 6m</span></p>
+              </div>
+              <div class="role__body">
+                <h4 class="role__title">Software Engineer II (SDE-2)</h4>
+                <p class="role__scope">Tech lead for a team of 6 developers building the loan origination and loan management systems, and a core member of the Architecture Review Board. Promoted from SDE-1 in February 2025.</p>
+
+                <h5 class="role__group">Leadership and ownership</h5>
+                <ul class="role__points">
+                  <li>Own the <strong>decision engine</strong> that has underwritten <strong>2.75 lakh loans</strong>, and the <strong>payment service</strong> behind every payment at Kuhoo.</li>
+                  <li>Led the <strong>₹50 Cr portfolio migration</strong> from a partner NBFC to Kuhoo Finance.</li>
+                  <li>Run requirement elicitation, HLD/LLD, database design, API specs and sprint planning for the LMS team.</li>
+                  <li>Mentored interns into backend developers and created the onboarding process for new backend engineers.</li>
+                </ul>
+
+                <h5 class="role__group">Lending platform</h5>
+                <ul class="role__points">
+                  <li>Built <strong>every loan calculation</strong> behind a <strong>₹300 Cr loan book</strong> as the individual contributor, including the EMI calculator and end-to-end part payment and foreclosure.</li>
+                  <li>Cut loan turnaround <strong>77%</strong> (2.5 hours to 34 minutes) and lifted disbursement conversion <strong>8%</strong> with Green Channel, a fast track built on data-driven eligibility checks.</li>
+                  <li>Architected the LOS, LMS and a multi-lender aggregator for <strong><span class="nb">4–5</span> NBFCs</strong>, and designed and integrated the OneFin loan management system.</li>
+                  <li>Automated sanction and disbursement for <strong>500+ applications a day</strong> across 8+ third-party services, cutting manual document work <strong>70%</strong>.</li>
+                  <li>Built 50+ REST APIs and features across the LOS, verification, user management, MDM and document microservices, plus the partner onboarding backend.</li>
+                </ul>
+
+                <h5 class="role__group">KYC, documents and automation</h5>
+                <ul class="role__points">
+                  <li>Re-architected the verification microservice around HyperVerge, Digio and Signzy, with e-Aadhaar via DigiLocker, PAN, Aadhaar and video verification.</li>
+                  <li>Took <strong>72% of documents</strong> off the manual-review queue with OCR, and cut manual calling <strong>60%</strong> with an AI voice bot handling 80K+ events a month.</li>
+                </ul>
+
+                <h5 class="role__group">Security, performance and reliability</h5>
+                <ul class="role__points">
+                  <li>Owned <strong>DPDP Act</strong> data protection, with a full loan audit log, object-level authorization against IDOR and role-based field-level security on every backend API.</li>
+                  <li>Made APIs up to <strong>60% faster</strong> and database reads <strong>45% faster</strong> by tuning PostgreSQL and Redis, including hash-indexed PII-vault lookups.</li>
+                  <li>Defined the approach to Gunicorn worker and thread configuration, load-tested services for RPS and throughput, and set the team’s approach to Django migrations.</li>
+                  <li>Led the root-cause analysis of a production Redis connection leak on AWS ElastiCache, traced to gevent context switching in Celery workers.</li>
+                  <li>Ship features spec-first with Claude Code and Cursor, with agent-written pytest suites gating every merge.</li>
+                </ul>
+              </div>
+            </article>
+          </section>
+
+          <section class="org" id="role-tmedia" data-role="tmedia" aria-labelledby="org-tmedia-title">
+            <header class="org__head">
+              <h3 class="org__name" id="org-tmedia-title">TMedia Business Solution</h3>
+              <p class="org__meta">Ahmedabad, Gujarat</p>
+            </header>
+            <article class="role">
+              <div class="role__meta">
+                <p class="role__dates"><time datetime="2022-02">Feb 2022</time> – <time datetime="2022-08">Aug 2022</time></p>
+                <p class="role__dur" data-span="2022-02..2022-08">7m</p>
+              </div>
+              <div class="role__body">
+                <h4 class="role__title">Software Development Engineer</h4>
+                <ul class="role__points">
+                  <li>Cut deployment errors <strong>80%</strong> by automating GitLab CI/CD on AWS, and raised test coverage to <strong>85%</strong>.</li>
+                  <li>Built Python/Django microservices with KYC and OCR integrations.</li>
+                </ul>
+              </div>
+            </article>
+          </section>
+
+          <section class="org" id="role-zucol" data-role="zucol" aria-labelledby="org-zucol-title">
+            <header class="org__head">
+              <h3 class="org__name" id="org-zucol-title">Zucol Services</h3>
+              <p class="org__meta">Jaipur, Rajasthan</p>
+            </header>
+            <article class="role">
+              <div class="role__meta">
+                <p class="role__dates"><time datetime="2020-04">Apr 2020</time> – <time datetime="2022-01">Jan 2022</time></p>
+                <p class="role__dur" data-span="2020-04..2022-01">1y 10m</p>
+              </div>
+              <div class="role__body">
+                <h4 class="role__title">Software Development Engineer</h4>
+                <ul class="role__points">
+                  <li>Made PostgreSQL data retrieval <strong>30% faster</strong> through schema design and query optimization, and shipped production APIs for frontend teams.</li>
+                  <li>Delivered a DRF task-management platform for <strong>100+ employees</strong>, secured with PyOTP two-factor authentication and audit logging.</li>
+                </ul>
+              </div>
+            </article>
+          </section>
+
+          <section class="org org--edu" aria-labelledby="edu-title">
+            <header class="org__head">
+              <h3 class="org__name" id="edu-title">Rajasthan Technical University</h3>
+              <p class="org__meta">Kota, Rajasthan&nbsp;· 2020</p>
+            </header>
+            <p class="org__line">B.Tech, Electronics and Communication Engineering</p>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== WORK ============================== -->
+    <section class="section section--tint" id="work" aria-labelledby="work-title">
+      <div class="wrap">
+        <header class="section__head">
+          <a class="route" href="#work" data-copy-link><span class="route__verb">GET</span> /#work</a>
+          <h2 class="section__title" id="work-title">Selected work</h2>
+          <p class="section__intro">The problems I’m proudest of solving at Kuhoo Finance, and the numbers that moved. Plus one production incident worth learning from.</p>
+        </header>
+
+        <div class="cases">
+          <article class="case" id="green-channel" aria-labelledby="case-green-title">
+            <div class="case__intro">
+              <p class="case__kicker">Decision engine&nbsp;· Green Channel</p>
+              <h3 class="case__title" id="case-green-title">From 2.5 hours to 34 minutes</h3>
+              <p class="case__deck">I own the decision engine that has underwritten 2.75 lakh loans. Green Channel is its fast track for the applications the data already says yes to.</p>
+            </div>
+            <div class="case__body">
+              <dl class="case__facts">
+                <div><dt>Problem</dt><dd>Every application waited in the same manual review queue, so strong applicants waited as long as everyone else, about 2.5 hours.</dd></div>
+                <div><dt>What I built</dt><dd>Green Channel, a fast-track flow. Data-driven eligibility checks decide which applications can skip the manual queue; the rest go through standard review.</dd></div>
+                <div><dt>Result</dt><dd>Turnaround fell <strong>77%</strong> to 34 minutes and disbursement conversion rose <strong>8%</strong>. Faster decisions turned into more funded loans.</dd></div>
+              </dl>
+              <figure class="fig">
+                <figcaption class="fig__title">Time from application to loan decision</figcaption>
+                <div class="bars" role="img" aria-label="Standard review takes 2 hours 30 minutes. Green Channel takes 34 minutes, 77% less.">
+                  <div class="bar">
+                    <span class="bar__label">Standard review</span>
+                    <span class="bar__track"><span class="bar__fill" style="--v: 1"></span><span class="bar__value">2 h 30 min</span></span>
+                  </div>
+                  <div class="bar bar--hl">
+                    <span class="bar__label">Green Channel</span>
+                    <span class="bar__track"><span class="bar__fill" style="--v: .2267"></span><span class="bar__value">34 min</span></span>
+                  </div>
+                </div>
+              </figure>
+            </div>
+          </article>
+
+          <article class="case" id="loan-math" aria-labelledby="case-math-title">
+            <div class="case__intro">
+              <p class="case__kicker">Loan calculations&nbsp;· ₹300 Cr book</p>
+              <h3 class="case__title" id="case-math-title">Every rupee of a ₹300&nbsp;Cr book, calculated</h3>
+              <p class="case__deck">I’m the individual contributor for all loan calculations at Kuhoo Finance.</p>
+            </div>
+            <div class="case__body">
+              <dl class="case__facts">
+                <div><dt>Problem</dt><dd>Lending math has to be exact for every loan, every month. EMIs, part payments that reshape a schedule and foreclosures that close a loan early all have to agree to the rupee.</dd></div>
+                <div><dt>What I built</dt><dd>All of the platform’s loan calculations, including the EMI calculator (designed and built) and part payment and foreclosure, end to end.</dd></div>
+                <div><dt>Result</dt><dd>These calculations power Kuhoo Finance’s <strong>₹300 Cr</strong> loan book.</dd></div>
+              </dl>
+              <figure class="fig">
+                <figcaption class="fig__title">The EMI formula behind every repayment schedule</figcaption>
+                <p class="formula" role="img" aria-label="EMI equals P times r times (1 plus r) to the power n, divided by (1 plus r) to the power n, minus 1">
+                  <span class="formula__lhs">EMI</span><span class="formula__eq">=</span><span class="formula__frac"><span class="formula__num">P · r · (1 + r)<sup>n</sup></span><span class="formula__den">(1 + r)<sup>n</sup> − 1</span></span>
+                </p>
+                <p class="formula__legend">P principal&nbsp;· r monthly interest rate&nbsp;· n tenure in months</p>
+              </figure>
+            </div>
+          </article>
+
+          <article class="case" id="lending-platform" aria-labelledby="case-platform-title">
+            <div class="case__intro">
+              <p class="case__kicker">Lending platform&nbsp;· Architecture</p>
+              <h3 class="case__title" id="case-platform-title">One platform, <span class="nb">4–5</span> lenders</h3>
+              <p class="case__deck">The origination, servicing and lender-routing platform behind our education loans.</p>
+            </div>
+            <div class="case__body">
+              <dl class="case__facts">
+                <div><dt>Problem</dt><dd>Every NBFC lender brings its own rules for checks, sanction and disbursement, and education loans pay out in tranches instead of all at once.</dd></div>
+                <div><dt>What I built</dt><dd>The LOS, the LMS and a multi-lender aggregator, with KYC, Video KYC, CKYC, e-sign and tranche disbursement as shared flows that every lender plugs into. I also designed and integrated the OneFin loan management system.</dd></div>
+                <div><dt>Result</dt><dd><strong>500+ applications a day</strong> go from sanction to disbursement automatically, across <strong>8+</strong> integrated services, with 70% less manual document work. I also led the <strong>₹50 Cr</strong> portfolio migration from a partner NBFC to Kuhoo Finance.</dd></div>
+              </dl>
+              <figure class="fig">
+                <figcaption class="fig__title">The path of every application (simplified)</figcaption>
+                <ol class="flow">
+                  <li>Apply</li>
+                  <li>KYC <span>V-KYC · CKYC</span></li>
+                  <li class="flow__hl">Lender match <span>1 of 4–5 NBFCs</span></li>
+                  <li>Sanction</li>
+                  <li>e-Sign</li>
+                  <li>Disburse <span>per tranche</span></li>
+                </ol>
+              </figure>
+            </div>
+          </article>
+
+          <article class="case" id="automation" aria-labelledby="case-auto-title">
+            <div class="case__intro">
+              <p class="case__kicker">KYC + OCR&nbsp;· Automation</p>
+              <h3 class="case__title" id="case-auto-title">72% of documents never reach a human</h3>
+              <p class="case__deck">OCR and an AI voice bot took the repetitive work out of loan operations.</p>
+            </div>
+            <div class="case__body">
+              <dl class="case__facts">
+                <div><dt>Problem</dt><dd>Operations teams checked PAN cards, Aadhaar, salary slips and mark sheets by hand, and spent much of the day calling applicants.</dd></div>
+                <div><dt>What I built</dt><dd>A re-architected verification microservice on HyperVerge, Digio and Signzy, covering e-Aadhaar via DigiLocker, PAN, Aadhaar and video KYC. On top of it, OCR for those four document types and an AI voice bot that together handle <strong>80K+ events a month</strong>.</dd></div>
+                <div><dt>Result</dt><dd><strong>72%</strong> of documents skip manual review, and manual calling effort is down <strong>60%</strong>.</dd></div>
+              </dl>
+              <figure class="fig">
+                <figcaption class="fig__title">Where documents go after OCR</figcaption>
+                <div class="meter" role="img" aria-label="72% of documents clear automatically; 28% go to manual review.">
+                  <span class="meter__seg meter__seg--auto" style="--v: .72"></span>
+                  <span class="meter__seg meter__seg--manual" style="--v: .28"></span>
+                </div>
+                <p class="meter__legend">
+                  <span><i class="swatch swatch--auto"></i>72% cleared automatically</span>
+                  <span><i class="swatch swatch--manual"></i>28% to manual review</span>
+                </p>
+              </figure>
+            </div>
+          </article>
+
+          <article class="case" id="privacy" aria-labelledby="case-privacy-title">
+            <div class="case__intro">
+              <p class="case__kicker">DPDP Act&nbsp;· Compliance</p>
+              <h3 class="case__title" id="case-privacy-title">Privacy built into every loan</h3>
+              <p class="case__deck">Data protection for India’s DPDP Act, designed into the lending platform from the schema up.</p>
+            </div>
+            <div class="case__body">
+              <dl class="case__facts">
+                <div><dt>Problem</dt><dd>India’s DPDP Act raised the bar for how lenders store and account for personal data, and tracing what happened to a loan meant digging through records by hand.</dd></div>
+                <div><dt>What I built</dt><dd>An audit log of the entire loan history, object-level authorization on customer and loan APIs, role-based field-level security across every backend API, and a PII vault with lookups on a hash index.</dd></div>
+                <div><dt>Result</dt><dd>No more manual tracing, and no path for one customer to read another customer’s data or loans.</dd></div>
+              </dl>
+            </div>
+          </article>
+
+          <article class="pm" id="postmortem" aria-labelledby="pm-title">
+            <header class="pm__bar">
+              <span class="pm__type">Postmortem</span>
+              <span class="pm__where">Production · Celery workers → AWS ElastiCache</span>
+              <span class="pm__status">
+                <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" focusable="false"><path d="M3.5 8.5l3 3 6-7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Resolved
+              </span>
+            </header>
+            <h3 class="pm__title" id="pm-title">The Redis connection leak that came from gevent</h3>
+            <dl class="pm__grid">
+              <div><dt>Symptom</dt><dd>Open Redis connections on AWS ElastiCache kept climbing in production.</dd></div>
+              <div><dt>Root cause</dt><dd>gevent context switching inside the Celery workers left connections open.</dd></div>
+              <div><dt>My role</dt><dd>Led the root-cause analysis and shipped the fix.</dd></div>
+              <div><dt>Takeaway</dt><dd>Changing a worker’s concurrency model changes how every pooled client behaves. Test connection handling under the pool you actually run in production.</dd></div>
+            </dl>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== STACK ============================== -->
+    <section class="section" id="stack" aria-labelledby="stack-title">
+      <div class="wrap">
+        <header class="section__head">
+          <a class="route" href="#stack" data-copy-link><span class="route__verb">GET</span> /#stack</a>
+          <h2 class="section__title" id="stack-title">Stack</h2>
+          <p class="section__intro">The usual shape of the lending systems I build, with the tools in the places I use them.</p>
+        </header>
+
+        <figure class="arch" aria-labelledby="arch-caption">
+          <div class="tier">
+            <p class="tier__name">Clients</p>
+            <ul class="tier__nodes">
+              <li class="node"><b>Borrower apps</b><span>web&nbsp;· mobile</span></li>
+              <li class="node"><b>Partner &amp; lender APIs</b><span>NBFCs&nbsp;· partners</span></li>
+              <li class="node"><b>Ops console</b><span>credit&nbsp;· operations</span></li>
+            </ul>
+          </div>
+          <div class="hop"><span>HTTPS&nbsp;· JWT / OAuth2&nbsp;· 2FA</span></div>
+          <div class="tier">
+            <p class="tier__name">Services</p>
+            <ul class="tier__nodes tier__nodes--six">
+              <li class="node"><b>Loan origination</b><span>LOS&nbsp;· Django&nbsp;· DRF</span></li>
+              <li class="node"><b>Loan management</b><span>LMS&nbsp;· OneFin integration</span></li>
+              <li class="node"><b>Decision engine</b><span>credit underwriting</span></li>
+              <li class="node"><b>Payment service</b><span>every payment</span></li>
+              <li class="node"><b>Verification</b><span>KYC&nbsp;· V-KYC&nbsp;· DigiLocker</span></li>
+              <li class="node"><b>Lender aggregator</b><span><span class="nb">4–5</span> NBFCs</span></li>
+            </ul>
+            <p class="tier__note">plus user management, MDM and document services&nbsp;· object-level auth&nbsp;· field-level security&nbsp;· idempotency keys&nbsp;· audit log</p>
+          </div>
+          <div class="hop"><span>SQL&nbsp;· cache and locks&nbsp;· publish events</span></div>
+          <div class="tier">
+            <p class="tier__name">State</p>
+            <ul class="tier__nodes">
+              <li class="node"><b>PostgreSQL</b><span>Aurora / RDS</span></li>
+              <li class="node node--hl"><b>Redis</b><span>ElastiCache&nbsp;· idempotency store</span></li>
+              <li class="node"><b>RabbitMQ</b><span>event bus</span></li>
+            </ul>
+          </div>
+          <div class="hop hop--async"><span>consume events, async</span></div>
+          <div class="tier">
+            <p class="tier__name">Workers</p>
+            <ul class="tier__nodes">
+              <li class="node node--wide"><b>Celery workers</b><span>KYC checks&nbsp;· OCR&nbsp;· payouts&nbsp;· voice-bot events</span></li>
+            </ul>
+          </div>
+          <div class="hop"><span>HTTPS&nbsp;· retries carry idempotency keys</span></div>
+          <div class="tier">
+            <p class="tier__name">Providers</p>
+            <ul class="tier__nodes">
+              <li class="node"><b>KYC&nbsp;· V-KYC&nbsp;· CKYC</b><span>identity</span></li>
+              <li class="node"><b>e-Sign</b><span>agreements</span></li>
+              <li class="node"><b>Payouts</b><span>disbursement</span></li>
+              <li class="node"><b>OCR&nbsp;· voice bot</b><span>documents&nbsp;· calls</span></li>
+            </ul>
+            <p class="tier__note">Signzy&nbsp;· HyperVerge&nbsp;· Digio&nbsp;· Cashfree</p>
+          </div>
+          <p class="arch__platform"><span>Runs on</span> AWS (EKS, EC2, S3)&nbsp;· Kubernetes&nbsp;· Docker&nbsp;· GitLab CI/CD&nbsp;· Sentry&nbsp;· Kibana</p>
+          <figcaption class="arch__caption" id="arch-caption">
+            <span class="arch__key"><i class="key key--sync"></i>request</span>
+            <span class="arch__key"><i class="key key--async"></i>async event</span>
+            Simplified. Requests flow down; Redis holds the idempotency keys that make retries safe.
+          </figcaption>
+        </figure>
+
+        <dl class="specs">
+          <div><dt>Languages &amp; frameworks</dt><dd>Python&nbsp;· SQL&nbsp;· Django&nbsp;· Django REST Framework&nbsp;· Celery&nbsp;· Gunicorn&nbsp;· OOP</dd></div>
+          <div><dt>Architecture</dt><dd>Microservices&nbsp;· REST APIs&nbsp;· System design (HLD/LLD)&nbsp;· Event-driven architecture&nbsp;· Distributed systems&nbsp;· Async processing&nbsp;· Idempotency&nbsp;· High availability&nbsp;· Fault tolerance&nbsp;· Scalability&nbsp;· Load testing</dd></div>
+          <div><dt>Data &amp; messaging</dt><dd>PostgreSQL&nbsp;· Database design&nbsp;· Query optimization&nbsp;· Indexing&nbsp;· Django migrations&nbsp;· Redis&nbsp;· Caching&nbsp;· RabbitMQ</dd></div>
+          <div><dt>Cloud &amp; DevOps</dt><dd>AWS (EC2, S3, RDS/Aurora, ElastiCache, EKS)&nbsp;· Docker&nbsp;· Kubernetes&nbsp;· Git&nbsp;· GitLab CI/CD&nbsp;· Zero-downtime deploys&nbsp;· Kibana&nbsp;· Sentry&nbsp;· Root-cause analysis</dd></div>
+          <div><dt>Security &amp; compliance</dt><dd>DPDP Act&nbsp;· Data governance&nbsp;· Audit logging&nbsp;· IDOR prevention&nbsp;· Role-based field-level security&nbsp;· JWT&nbsp;· OAuth2&nbsp;· Two-factor authentication</dd></div>
+          <div><dt>Lending domain</dt><dd>LOS&nbsp;· LMS&nbsp;· Credit decision engine&nbsp;· Underwriting&nbsp;· Loan calculations (EMI, part payment, foreclosure)&nbsp;· Payments&nbsp;· Portfolio migration&nbsp;· Multi-lender aggregation&nbsp;· KYC&nbsp;· Video KYC&nbsp;· CKYC&nbsp;· e-Aadhaar (DigiLocker)&nbsp;· Partner onboarding&nbsp;· Disbursement&nbsp;· Tranche processing&nbsp;· e-Signature&nbsp;· Document verification&nbsp;· OCR</dd></div>
+          <div><dt>AI-assisted development</dt><dd>Claude Code&nbsp;· Claude&nbsp;· Cursor&nbsp;· Spec-driven development&nbsp;· Agentic coding&nbsp;· Prompt engineering&nbsp;· Cursor rules&nbsp;· AI‑generated pytest suites</dd></div>
+          <div><dt>Integrations</dt><dd>Signzy&nbsp;· HyperVerge&nbsp;· Digio&nbsp;· Cashfree&nbsp;· DigiLocker&nbsp;· OneFin LMS</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ============================== WRITING ============================== -->
+    <section class="section section--tint" id="writing" aria-labelledby="writing-title">
+      <div class="wrap">
+        <header class="section__head">
+          <a class="route" href="#writing" data-copy-link><span class="route__verb">GET</span> /#writing</a>
+          <h2 class="section__title" id="writing-title">Writing</h2>
+          <p class="section__intro">Deep dives on backend engineering: PostgreSQL internals and scaling, RabbitMQ, data structures in real systems, and RAG pipelines with pgvector. Published on Medium.</p>
+          <a class="btn btn--small section__aside" href="https://medium.com/" target="_blank" rel="noopener" data-medium-link hidden>All posts on Medium <span aria-hidden="true">↗</span></a>
+        </header>
+
+        <div class="writing" data-writing>
+          <noscript>
+            <p class="writing__empty">The post list needs JavaScript. You can read everything on Medium.</p>
+          </noscript>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== ABOUT ============================== -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="wrap">
+        <header class="section__head">
+          <a class="route" href="#about" data-copy-link><span class="route__verb">GET</span> /#about</a>
+          <h2 class="section__title" id="about-title">About</h2>
+        </header>
+
+        <div class="about">
+          <p class="about__lead">I’m a backend engineer in Mumbai. I build the systems behind digital lending, the ones that verify who you are, decide on your loan and send the money exactly once.</p>
+          <div class="about__bio">
+            <p>I started in 2020 building Django APIs and secure internal tools. In 2022 I moved into fintech, and lending has been my focus ever since. Today I lead a team of 6 developers on our loan origination and loan management systems, and I own the decision engine, the payment service and the loan calculations behind a ₹300&nbsp;Cr book.</p>
+            <p>As tech lead I run requirement elicitation, HLD/LLD and sprint planning, review designs and code, sit on the Architecture Review Board and help hire. I’ve mentored interns into backend developers and built our onboarding process for new engineers. I use Claude Code and Cursor every day, and specs and tests keep them honest.</p>
+          </div>
+        </div>
+
+        <div class="about__how">
+          <h3 class="about__subhead">How I work</h3>
+          <ul class="principles">
+            <li>
+              <h4>Retries should be boring.</h4>
+              <p>Every endpoint that moves money takes an idempotency key, so a double tap, a timeout or a redelivered message can’t pay out twice.</p>
+            </li>
+            <li>
+              <h4>Spec first, then agents.</h4>
+              <p>Features start as a written spec. Claude Code and Cursor implement against it, pytest proves it, and CI blocks the merge until the tests pass.</p>
+            </li>
+            <li>
+              <h4>Privacy belongs in the data model.</h4>
+              <p>PII sits in a vault, access is checked per object, and every change to a loan is written to an audit log.</p>
+            </li>
+            <li>
+              <h4>Find the root cause.</h4>
+              <p>Production issues get a proper root-cause analysis. That’s how a Redis connection leak got traced to gevent context switching inside Celery workers.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== CONTACT ============================== -->
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="wrap">
+        <header class="section__head">
+          <a class="route" href="#contact" data-copy-link><span class="route__verb">POST</span> /#contact</a>
+          <h2 class="section__title" id="contact-title">Contact</h2>
+          <p class="section__intro">Building something in fintech, or need a backend engineer who sweats the details of moving money? Email is the fastest way to reach me.</p>
+        </header>
+
+        <div class="contact__email">
+          <a class="contact__address" href="mailto:workmohitsoni0@gmail.com">workmohitsoni0@gmail.com</a>
+          <button class="btn btn--small contact__copy" type="button" data-copy="workmohitsoni0@gmail.com" data-copy-label="Email address">
+            <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" focusable="false"><rect x="5.5" y="5.5" width="8" height="8" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M10.5 3.5v-.5A1.5 1.5 0 0 0 9 1.5H4A1.5 1.5 0 0 0 2.5 3v5A1.5 1.5 0 0 0 4 9.5h.5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg>
+            Copy
+          </button>
+        </div>
+
+        <ul class="contact__links">
+          <li><a href="https://www.linkedin.com/in/mohitsoni0" target="_blank" rel="noopener me"><span>LinkedIn</span><span class="contact__handle">in/mohitsoni0</span><span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://github.com/m0hits0ni" target="_blank" rel="noopener me"><span>GitHub</span><span class="contact__handle">m0hits0ni</span><span aria-hidden="true">↗</span></a></li>
+          <li data-medium-item hidden><a href="https://medium.com/" target="_blank" rel="noopener me" data-medium-link><span>Medium</span><span class="contact__handle" data-medium-handle></span><span aria-hidden="true">↗</span></a></li>
+          <li><a href="assets/Mohit_Soni_Resume.pdf" target="_blank" rel="noopener"><span>Résumé</span><span class="contact__handle">PDF, 2 pages</span><span aria-hidden="true">↗</span></a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <p>© <span data-year>2026</span> Mohit Soni · Mumbai</p>
+      <p>Plain HTML, CSS and JavaScript. No frameworks, no trackers.</p>
+      <p class="footer__tools">
+        <button class="linkish" type="button" data-palette-open>Press <kbd data-mod-key>⌘K</kbd> to jump anywhere</button>
+        <a href="#top">Back to top ↑</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Command menu -->
+  <dialog class="palette" data-palette aria-label="Command menu">
+    <div class="palette__box" tabindex="-1">
+      <div class="palette__search">
+        <svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true" focusable="false"><circle cx="9" cy="9" r="5.75" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M13.5 13.5l3.5 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <input class="palette__input" id="palette-input" type="text" role="combobox" aria-expanded="true" aria-controls="palette-list" aria-autocomplete="list" autocomplete="off" spellcheck="false" placeholder="Search or jump to…">
+        <button class="palette__esc" type="button" data-palette-close aria-label="Close the command menu">esc</button>
+      </div>
+      <ul class="palette__list" id="palette-list" role="listbox" aria-label="Commands"></ul>
+      <p class="palette__foot"><span><kbd>↑</kbd><kbd>↓</kbd> move</span><span><kbd>↵</kbd> select</span><span><kbd>esc</kbd> close</span></p>
+    </div>
+  </dialog>
+
+  <div class="toast" data-toast role="status" aria-live="polite"></div>
+</body>
+</html>
