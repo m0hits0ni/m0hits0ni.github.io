@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://m0hits0ni.github.io/sitemap.xml

@@ -1,0 +1,54 @@
+# Pulls new Medium posts into content/medium-feed.js once a day.
+# Does nothing until `medium` is set in content/posts.js.
+name: Sync Medium posts
+
+on:
+  schedule:
+    - cron: "17 3 * * *" # 08:47 IST, daily
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: sync-medium
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Fetch the Medium feed
+        run: node scripts/sync-medium.mjs
+
+      - name: Commit new posts
+        id: commit
+        run: |
+          if git diff --quiet -- content/medium-feed.js; then
+            echo "No new posts."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add content/medium-feed.js
+          git commit -m "Sync Medium posts"
+          git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      # Pushes made with GITHUB_TOKEN don't always trigger a Pages rebuild, so ask for one.
+      # Harmless if the site is hosted on Netlify or Vercel instead (they deploy on push).
+      - name: Rebuild GitHub Pages
+        if: steps.commit.outputs.changed == 'true'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X POST "repos/${{ github.repository }}/pages/builds" || echo "Pages build not requested (Pages may not be enabled for this repo)."
